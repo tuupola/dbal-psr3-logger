@@ -1,6 +1,6 @@
 {
     "name": "tuupola/dbal-psr3-logger",
-    "description": "PSR3 SQLLogger for Doctrine DBAL",
+    "description": "PSR-3 logger for Doctrine DBAL",
     "keywords": [
         "DBAL",
         "PSR-3",
