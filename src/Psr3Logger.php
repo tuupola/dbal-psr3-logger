@@ -41,7 +41,10 @@ class Psr3Logger implements SQLLogger
 
             $quotedParams = array();
             foreach ($params as $typeIndex => $value) {
-                $quotedParams[] = $this->connection->quote($value, isset($types[$typeIndex]) ? $types[$typeIndex] : \PDO::PARAM_STR);
+                $quotedParams[] = $this->connection->quote(
+                    $value,
+                    isset($types[$typeIndex]) ? $types[$typeIndex] : \PDO::PARAM_STR
+                );
             }
 
             $this->sql = vsprintf(str_replace("?", "%s", $sql), $quotedParams);
